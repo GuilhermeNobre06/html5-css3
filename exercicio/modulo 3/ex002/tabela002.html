@@ -12,6 +12,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption{
@@ -31,6 +32,18 @@
         thead, tfoot{
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th{
+            /* EFEITO DO CABEÇALHO FIXO */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(odd){
+            /* "2n" numero e o tanto de linhas que pula, podemos usar odd e even, par ou impar no caso*/
+            background-color: lightgrey;
         }
 
         td.num{
@@ -57,8 +70,8 @@
         <Caption>População das Unidades Federatifas</Caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -173,7 +186,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>212.583.720</strong></td>
             </tr>
         </tfoot>
