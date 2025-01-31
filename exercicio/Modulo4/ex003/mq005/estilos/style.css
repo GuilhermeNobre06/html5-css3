@@ -32,8 +32,8 @@ header h1{
 }
 
 #burguer:hover{
-    background-color: black;
-    color: gray;
+    background-color: gray;
+    color: black;
 }
 
 menu > ul{
