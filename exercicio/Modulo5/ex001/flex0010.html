@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        /*Flex-basis deixa o item em um tamanho especifico
+        
+        flex-shrink = 1 igual a sim e 0 igual nao
+        basicamente no sim ele deixa diminuir o item e no nao ele nao deixa diminuir caso o numero seja maior que 1 por exemplo 2 ai vai diminuir conforme a equacao 2 e o dobro do 1 e assim por diante 
+
+        Flex-grow = 1 igual a sim e 0 igual nao
+        basicamente no sim ele deixa aumentar o item e no nao ele nao deixa aumentar do tamanho do container caso o numero seja maior que 1 por exemplo 2 ai vai crescer conforme a equacao 2 e o dobro do 1 e assim por diante 
+        */
+        div.conteiner{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row nowrap; 
+        }
+
+        div.item{
+            background-color: salmon;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        #item1{
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        #item2{
+            flex-basis: 150px;
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        #item3{
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="item1">A</div>
+        <div class="item" id="item2">B</div>
+        <div class="item" id="item3">C</div>
+    </div>
+</body>
+</html>
