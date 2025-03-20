@@ -28,6 +28,7 @@ header > h1{
     margin: 5px;
     padding: 2px;
     flex: 0 0 150px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
 }
 
 nav{
@@ -61,3 +62,50 @@ main{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.493);
 }
 
+main > h2{
+    text-align: center;
+}
+
+main > p{
+    margin: 5px;
+    text-indent: 1.5em;
+}
+
+#burguer{
+    display: none;
+}
+
+@media screen and (max-width: 525px) {
+    header, header > nav{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: space-around;
+    }
+
+    header > h1{
+        flex-basis: 48px;
+    }
+
+    
+    header > nav > a{
+        display: block;
+        width: 90vw;
+    }
+
+    #burguer{
+        display: block;
+        background-color: rgba(0, 0, 0, 0.541);
+        width: 90vw;
+        text-align: center;
+        padding: 4px;
+        margin: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #burguer:hover{
+    background-color: white;
+    color: black;
+    transition: background-color .5s;
+    }
+}
